@@ -6,6 +6,7 @@ import { ExInterpComponent } from './views/ex-interp/ex-interp.component';
 import { Exer1Component } from './views/exer1/exer1.component';
 import { Exer2Component } from './views/exer2/exer2.component';
 import { Exer3Component } from './views/exer3/exer3.component';
+import { Exer4Component } from './views/exer4/exer4.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { Exer3Component } from './views/exer3/exer3.component';
     ExInterpComponent,
     Exer1Component,
     Exer2Component,
-    Exer3Component
+    Exer3Component,
+    Exer4Component
   ],
   imports: [
     BrowserModule
