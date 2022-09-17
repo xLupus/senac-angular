@@ -56,3 +56,18 @@
 <br>
 <input id="contatoEmail" type="checkbox" [(ngModel)]="contatoEmail">
 <label for="contatoEmail">Contato por Email</label> {{contatoEmail}}
+<br><br>
+<hr>
+
+<h2>Exemplo 7</h2>
+
+<input id="classe-mago" type="radio" value="mago" [(ngModel)]="classeHeroi">
+<label for="classe-mago">Mago</label>
+<br>
+<input id="classe-guerreiro" type="radio" value="guerreiro" [(ngModel)]="classeHeroi">
+<label for="classe-guerreiro">Guerreiro</label>
+<br>
+<input id="classe-arqueiro" type="radio" value="arqueiro" [(ngModel)]="classeHeroi">
+<label for="classe-arqueiro">Arqueiro</label>
+<br>
+<p>Classe Selecionada: {{classeHeroi}}</p>

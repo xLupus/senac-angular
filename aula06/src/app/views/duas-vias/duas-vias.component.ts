@@ -15,6 +15,7 @@ export class DuasViasComponent implements OnInit {
     generoFilme = '';
     contatoTelefone = false;
     contatoEmail = false;
+    classeHeroi = '';
 
   constructor() { }
 
