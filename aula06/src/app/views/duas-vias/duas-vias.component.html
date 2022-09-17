@@ -1,0 +1,58 @@
+<h3>Exemplo de Binding de Duas Vias</h3>
+
+<h4>Exemplo 1</h4>
+<input type="text" [(ngModel)]="nome">
+<br>
+{{ nome }}
+<br>
+<button type="button" (click)="limparNome()">Limpar</button>
+<br><br>
+<hr>
+
+<h4>Exemplo 2</h4>
+
+<input type="number" [(ngModel)]="valor1"> +
+<input type="number" [(ngModel)]="valor2"> =
+{{valor1 + valor2}}
+<br><br>
+<hr>
+
+<h4>Exemplo 3</h4>
+
+<input type="text" [(ngModel)]="nome">
+<input type="text" [(ngModel)]="sobrenome">
+<br>
+{{obterNomeCompleto()}}
+
+
+<br><br>
+<hr>
+
+<h4>Exemplo 4</h4>
+
+<input type="color" [(ngModel)]="cor"> {{cor}}
+<div style="background-color:{{cor}}; width:150px; height:150px;"></div>
+
+<br><br>
+<hr>
+
+<h2>Exemplo 5</h2>
+
+<select [(ngModel)]="generoFilme">
+    <option value="terror">Terror</option>
+    <option value="acao">Ação</option>
+    <option value="scifi">Sci-FI</option>
+</select>
+
+<img src="assets" alt="">
+{{generoFilme}}
+<br><br>
+<hr>
+
+<h2>Exemplo 6</h2>
+
+<input id="contatoTelefone" type="checkbox" [(ngModel)]="contatoTelefone">
+<label for="contatoTelefone">Contato por Telefone</label>  {{contatoTelefone}}
+<br>
+<input id="contatoEmail" type="checkbox" [(ngModel)]="contatoEmail">
+<label for="contatoEmail">Contato por Email</label> {{contatoEmail}}
