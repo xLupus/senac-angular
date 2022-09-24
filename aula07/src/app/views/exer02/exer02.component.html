@@ -1,0 +1,18 @@
+<h4>Exercicio 2</h4>
+
+<select [(ngModel)]="contato">
+    <option value="Whatsapp">Whatsapp</option>
+    <option value="Email">Email</option>
+</select>
+
+<div *ngIf="contato == 'Whatsapp'">
+    Digite seu Whatsapp:
+    <input type="number">
+</div>
+
+<div *ngIf="contato == 'Email'">
+    Digite seu E-mail:
+    <input type="email">
+</div>
+
+<hr>

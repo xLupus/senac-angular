@@ -1,0 +1,14 @@
+<h2>Exemplo ngFor</h2>
+
+<ul>
+    <li *ngFor="let animal of animais">{{animal}}</li>
+</ul>
+
+<table>
+    <tr *ngFor="let filme of filmes;  let i = index">
+        <td>{{filme}}</td>
+        <td>{{notas[i]}}</td>
+    </tr>
+</table>
+
+<hr>

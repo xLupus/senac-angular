@@ -1,0 +1,11 @@
+<h2>Exemplo ngIf</h2>
+
+<input type="text" [(ngModel)]="nome"><br>
+<br>
+<div *ngIf="nome == 'lupus'"> <!-- Se n for undefined, vazio e nulo basta por a variavel sozinha-->
+    Você Acertou <br>
+    Nome: {{nome}}
+</div>
+
+
+<hr>
