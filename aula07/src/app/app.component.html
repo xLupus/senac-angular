@@ -1,9 +1,29 @@
-<app-exemplo-ngif></app-exemplo-ngif>
-<app-exer01></app-exer01>
-<app-exer02></app-exer02>
-<app-exer03></app-exer03>
 
 
-<app-exemplo-ngfor></app-exemplo-ngfor>
-<app-exer04></app-exer04>
-<app-exer05></app-exer05>
+<select [(ngModel)]='opcao'>
+    <option value="ngif">Aula de ngIf</option>
+    <option value="ngfor">Aula de ngFor</option>
+    <option value="ngswitch">Aula de ngSwitch</option>
+</select>
+
+<div [ngSwitch]="opcao">
+    <div *ngSwitchCase="'ngif'">
+        <app-exemplo-ngif></app-exemplo-ngif>
+        <app-exer01></app-exer01>
+        <app-exer02></app-exer02>
+        <app-exer03></app-exer03>
+    </div>
+
+    <div *ngSwitchCase="'ngfor'">
+        <app-exemplo-ngfor></app-exemplo-ngfor>
+        <app-exer04></app-exer04>
+        <app-exer05></app-exer05>
+        <app-exer06></app-exer06>
+        <app-exer07></app-exer07>
+    </div>
+    
+    <div *ngSwitchCase="'ngswitch'">
+        <app-exemplo-ngswitch></app-exemplo-ngswitch>
+        <app-exer08></app-exer08>
+    </div>
+</div>
