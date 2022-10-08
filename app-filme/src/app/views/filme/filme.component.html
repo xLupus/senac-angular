@@ -1,0 +1,16 @@
+<h2>Gestor de Filmes</h2>
+
+<button (click)="novoFilme()">Novo Filme</button>
+
+<ul>
+    <li *ngFor="let filme of filmes; let i = index" ng2-ngFor>
+        <span (click)="selecionarFilme(filme)">{{ filme.nome }} ({{ filme.nota }})</span>
+        <span (click)="removerFilme(i)"> x </span>
+    </li>
+</ul>
+
+<div *ngIf="filmeSelecionado">
+    <input type="text" [(ngModel)]="filmeSelecionado.nome">
+    <input type="number" [(ngModel)]="filmeSelecionado.nota">
+    <button (click)="fechar()">Fechar</button>
+</div>
