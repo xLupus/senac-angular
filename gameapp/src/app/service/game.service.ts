@@ -24,7 +24,11 @@ export class GameService {
     this.jogos = this.jogos.filter( jogo => jogo.id != id );
   }
 
-  atualizar() {
+  atualizar(jogo: Jogo) {
+    const index = this.jogos.findIndex( j => j.id == jogo.id);
+
+    if (index >= 0)
+      this.jogos[index] = jogo;
 
   }
 }
