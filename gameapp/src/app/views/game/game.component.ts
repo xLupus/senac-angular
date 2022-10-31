@@ -8,35 +8,51 @@ import { GameService } from 'src/app/service/game.service';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  jogos: Jogo[] = [];
-  jogoSelecionado?: Jogo;
+    jogos: Jogo[] = [];
+    jogoSelecionado?: Jogo;
+    estaEditando = false;
 
-  constructor(private gameService: GameService) {
-    const jogo  = new Jogo();
-    const jogo2 = new Jogo();
+    constructor(private gameService: GameService) {
 
-    jogo.nome        = 'The Last of Us';
-    jogo.plataforma  = 'PS4';
-    jogo.genero      = 'Survival Horror';
+    }
 
-    jogo2.nome       = 'Valorant';
-    jogo2.plataforma = 'PC';
-    jogo2.genero     = 'FPS';
+    ngOnInit(): void {
+        this.atualizarLista();
+    }
 
-    gameService.inserir(jogo);
-    gameService.inserir(jogo2);
-  }
+    atualizarLista() {
+        this.jogos = this.gameService.listar();
+    }
 
-  ngOnInit(): void {
-    this.atualizarLista();
-  }
+    selecionarJogo( jogo: Jogo) {
+        this.jogoSelecionado = jogo;
+        this.estaEditando = true;
+    }
 
-  atualizarLista() {
-    this.jogos = this.gameService.listar();
-  }
+    salvar() {
+        if (this.estaEditando)
+            this.gameService.atualizar(this.jogoSelecionado);
 
-  selecionarJogo( jogo: Jogo) {
-    this.jogoSelecionado = jogo;
-  }
+        else
+            this.gameService.inserir(this.jogoSelecionado);
 
+        this.cancelar();
+    }
+
+    cancelar() {
+        this.jogoSelecionado = undefined;
+        this.atualizarLista();
+    }
+
+    novo() {
+        this.jogoSelecionado = new Jogo;
+        this.estaEditando = false
+    }
+
+    excluir(id?: number) {
+        if (!id) return
+
+        this.gameService.remover(id);
+        this.atualizarLista()
+    }
 }
