@@ -1,0 +1,9 @@
+<h3>Timezone</h3>
+
+<input type="text" [(ngModel)]="fuso">
+
+<button (click)="obterFuso()">Obter Horario</button>
+
+<div *ngIf="timezone">
+    <span>{{timezone.datetime}}</span>
+</div>
