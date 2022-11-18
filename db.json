@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "author": "Fabio Abenza",
+      "title": "Tá tudo caro!"
+    },
+    {
+      "author": "Fabio Abenza",
+      "title": "Xô spoiler!",
+      "id": 3
+    }
+  ],
+  "cliente": [
+    {
+      "id": 1,
+      "nome": "João",
+      "cpf": "123456789012"
+    },
+    {
+      "nome": "Fabio",
+      "cpf": "123",
+      "id": 2
+    },
+    {
+      "nome": "Ana",
+      "cpf": "123456",
+      "id": 3
+    },
+    {
+      "nome": "Batman",
+      "cpf": "123456123",
+      "id": 4
+    }
+  ],
+  "jogos": [
+    {
+      "id": 1,
+      "nome": "God of War Ragnarok",
+      "plataforma": "PS4/PS5"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
