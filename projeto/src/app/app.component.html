@@ -6,13 +6,16 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-    <mat-sidenav [opened]="true">
+    <mat-sidenav mode="side" #sidenav [opened]="true" style="width: 300px;">
         <mat-list>
             <a mat-list-item routerLink="/cliente">Clientes</a>
         </mat-list>
     </mat-sidenav>
 
-    <mat-sidenav-content style="min-height: calc(100vh - 64px)">
-        <router-outlet></router-outlet>
+    <mat-sidenav-content style="min-height: calc(100vh - 64px);">
+        <mat-card class="mat-elevation-z2 cartao">
+            <router-outlet></router-outlet>
+        </mat-card>
     </mat-sidenav-content>
+
 </mat-sidenav-container>

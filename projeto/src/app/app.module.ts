@@ -10,8 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { BrowserAnimationModule } from "@angular/platform=browser/animations";
-
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,10 @@ import { BrowserAnimationModule } from "@angular/platform=browser/animations";
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    BrowserAnimationModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
